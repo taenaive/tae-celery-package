@@ -2,12 +2,16 @@
 
 This project shows you how to package celery worker and task
  
- ## python installation
+## python installation
 
- ```bash
+```bash
   python3.11 -m venv .venv
-  pip install celery redis
-  ```
+  source .venv/bin/activate
+
+  pip install celery redis ...etc
+  #or just
+  pip install -r requirements.txt
+```
 
 ## distribution
 
@@ -17,5 +21,5 @@ pip install build
 python -m build -s -v
 # binary build
 python -m build --wheel -v
-#
+
 ```
