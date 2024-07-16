@@ -1,10 +1,10 @@
 from celery import Celery
-from tasks.taskBasic.cel_main import TaskBasicQueue
+from tae_celery_pac.tasks.taskBasic.cel_main import TaskBasicQueue
 
 app = Celery(
     "main",
     broker="redis://localhost:6379/0",
-    backend="redis://localhost:6379"
+    backend="redis://localhost:6379/0"
 )
 
 @app.task

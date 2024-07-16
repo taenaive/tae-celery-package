@@ -1,9 +1,9 @@
 from asyncio import run, sleep
 from celery.result import AsyncResult
 import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent.parent))
-from tae_server import TaskQueue, app
+# from pathlib import Path
+# sys.path.append(str(Path(__file__).parent.parent.parent))
+from tae_celery_pac.tae_server import TaskQueue, app
 
 async def runClient():
         result = TaskQueue.delay("Hola Task for Celery!")
